@@ -4,6 +4,7 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
+    "archive": "./scripts/archive.sh",
     "build": "remix vite:build",
     "dev": "remix vite:dev",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
@@ -11,15 +12,26 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@aws-sdk/client-apigatewaymanagementapi": "^3.549.0",
+    "@aws-sdk/client-dynamodb": "^3.549.0",
+    "@aws-sdk/client-sns": "^3.549.0",
+    "@aws-sdk/client-sqs": "^3.549.0",
+    "@aws-sdk/client-ssm": "^3.549.0",
+    "@aws-sdk/lib-dynamodb": "^3.549.0",
+    "@remix-run/architect": "^2.8.1",
     "@remix-run/node": "^2.8.1",
     "@remix-run/react": "^2.8.1",
     "@remix-run/serve": "^2.8.1",
+    "aws-sdk": "^2.1594.0",
     "isbot": "^4.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.8.1",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
@@ -30,6 +42,7 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "rollup": "^4.14.1",
     "typescript": "^5.1.6",
     "vite": "^5.1.0",
     "vite-tsconfig-paths": "^4.2.1"

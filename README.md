@@ -1,36 +1,10 @@
-# Welcome to Remix + Vite!
+The minimum configuration of Remix + Vite + Rollup that can be deployed on AWS Lambda.
 
-📖 See the [Remix docs](https://remix.run/docs) and the [Remix Vite docs](https://remix.run/docs/en/main/future/vite) for details on supported features.
+To distribute `build/client/assets/*` , additional configuration such as CloudFront is required.
 
-## Development
-
-Run the Vite dev server:
-
-```shellscript
-npm run dev
 ```
-
-## Deployment
-
-First, build your app for production:
-
-```sh
-npm run build
+$ pnpm install
+$ pnpm build && pnpm archive
+$ ls -l archive.zip
+-rw-r--r--  1 xxxxx  staff  1034384  4 11 07:50 archive.zip
 ```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-- `build/server`
-- `build/client`
